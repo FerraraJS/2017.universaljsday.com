@@ -6,29 +6,17 @@
             <h3 class="center">La conferenza</h3>
 
             <p>
-                <a href="http://www.docker.com" target="_blank">Docker</a> è un sistema software che permette di
-                automatizzare il deploy di applicazioni all'interno di container che condividono gran parte delle
-                risorse della macchina host Linux, rendendola una soluzione molto più leggera della consueta
-                virtualizzazione.
-                Il Container Day 2017 è interamente focalizzato su Docker.
+                Ti sei mai chiesto come poter diffondere rapidamente la tua app su diversi dispositivi mobile come iOS, Android o desktop, scrivendo il codice una volta sola?
             </p>
-
             <p>
-                La conferenza sarà divisa in due momenti:
-            <ul>
-                <li>
-                    <strong>27 Aprile</strong>: workshop tenuto da trainer Kiratech.
-                    {% if page.workshop %}.
-                        <a href="#workshop">Vedi il programma</a>.
-                    {% endif %}
-                </li>
-                <li><strong>28 Aprile</strong>: conferenza con argomenti di livello medio/avanzato</li>
-            </ul>
+                Aziende come Facebook, NetFlix o PayPal utilizzano JavaScript nel loro development stack a partire dal server web fino al loro dispositivo mobile; in questa giornata dedicata al JavaScript vogliamo discutere assieme tramite talk e laboratori su come JavaScript possa migliorare ed ampliare il target delle nostre app, ma soprattutto comprendere assieme quanto questo linguaggio utilizzato assieme a nuovi framework e pattern come React Native, Ionic, Server Side Rendering, Progressive Web Apps, Electron, NativeScript aprano nuovi orizzonti nello sviluppo di applicazioni in cloud.
             </p>
 
             <p>
                 La conferenza è organizzata dal <a href="http://www.grusp.org">GrUSP</a>
-                e da <a href="http://www.kiratech.it">Kiratech</a>
+                {% if page.partner %}
+                e da <a href="{{ page.partner_url}}">{{ page.partner }}</a>
+                {% endif %}
             </p>
 
             <p>
