@@ -1,27 +1,34 @@
-<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjYSHsdp2js4DZ3pCWf07Iha0qnR6ps5U&sensor=false&callback=initMap" async defer></script>
 <script>
-function initialize_map() {
+function initMap() {
 	var mapOptions = {
 	  zoom: 14,
-	  center: new google.maps.LatLng(45.4368799, 10.9720487),
+	  center: new google.maps.LatLng(44.8379235,11.6152695),
 	  mapTypeId: google.maps.MapTypeId.ROADMAP
 	}
 	var map = new google.maps.Map(document.getElementById('map_canvas'),
 								  mapOptions);
 
 	var stazione_portanuova = new google.maps.Marker({
-		position: new google.maps.LatLng(45.428671, 10.982607),
+		position: new google.maps.LatLng(44.842965,11.60258),
 		map: map,
 		icon: 'img/marker_trasporti.png',
-		title:"Stazione Verona Porta Nuova"
+		title: 'Stazione Ferrara'
 	});
 
-	 var HSM = new google.maps.Marker({
-		position: new google.maps.LatLng(45.4399785, 10.9697421),
+	 var HTF = new google.maps.Marker({
+		position: new google.maps.LatLng(44.8384386,11.6179089),
+		map: map,
+		icon: 'img/marker_hotel.png',
+		title: 'Hotel Touring'
+	});
+
+	var CNA = new google.maps.Marker({
+		position: new google.maps.LatLng(44.8323002,11.636131),
 		map: map,
 		icon: 'img/marker_i3p.png',
-		title:"Hotel San Marco"
-	});
+		title: 'CNA Ferrara'
+	})
 }
 </script>
 
@@ -37,7 +44,7 @@ function initialize_map() {
 			<dl>
 				<dt class="event_location"><span><strong>Event location</strong></span></dt>
 				<dd  class="event_location">
-					<a href="http://www.sanmarco.vr.it/">{{ page.location_name}} </a><br/>
+					<a href="http://www.cnafe.it/">{{ page.location_name}} </a><br/>
 					{{ page.location_address }}<br/>
 					{{ page.location_city }}
 				</dd>
@@ -45,43 +52,34 @@ function initialize_map() {
                   <dd>Ristoranti</dd> -->
 				<dt class="get_to"><span><strong>Come arrivare</strong></span></dt>
 				<dd>Stazione FS</dd>
-				<!-- <dt class="stay"><span><strong>Dove dormire</strong></span></dt>
-                  <dd>Alberghi</dd> -->
+				<dt class="stay"><span><strong>Dove dormire</strong></span></dt>
+				<dd>Hotel Touring</dd>
 			</dl>
 		</div>
 
 		<div class="clear"></div>
 
-		<div class="column_3">
+		<div class="column_4">
 			<h5>In auto</h5>
-			<p><strong>Dall'uscita A4 Verona Sud</strong>: Segui le indicazioni per Fiera - Verona Centro. Procedi su Via delle Nazioni, prosegui su Viale del Lavoro e quindi Viale del Piave. Arrivato in Piazzale Porta Nuova gira a sinistra. Segui Viale Luciano Dal Cero, procedi verso Porta Palio; alla rotonda procedi dritto su Viale Colonnello Galliano. Al primo semaforo gira a sinistra in Via San Marco. L'hotel si trova sulla sinistra, all'altezza del primo semaforo.</p>
+			<p><strong>Dall'uscita A13 - Ferrara Sud</strong>: Segui le indicazioni per Ferrara - Centro. Procedi dritto su RA8, fino alla rotonda con SS16/Via Ravenna. Alla rotonda, uscita su Via Ravenna. Alla rotonda, 1a uscita per Via Comacchio. Alla rotonda successiva 3a uscita per Via Caldirolo. Alla rotonda procedi dritto su Via Caldirolo, seconda uscita. La location si trova sulla vostra destra.</p>
 		</div>
 
-		<div class="column_3">
+		<div class="column_4">
 			<h5>In treno</h5>
 			<p>
-				<strong>Dalla stazione di Verona Porta Nuova (Frecciargento)</strong>: raggiungere l'hotel dalla stazione dei treni è molto facile, basta prendere l'autobus numero 11 o 95 alla fermata "C", in direzione "Chievo". La fermata di arrivo è "VIA LONGHENA 40", a due passi dall'hotel; se perdi questa fermata, scendi a "VIALE MANZONI 21/B" che si trova a 300 metri.<br>
+				<strong>Dalla stazione di Ferrara</strong>: raggiungere la location dalla stazione dei treni è molto facile, basta prendere l'autobus numero 1, 6, 9 o 21 in direzione "Arco della Prospettiva". La fermata di arrivo è presso l'arco della prospettiva, a due passi dalla location; se perdi questa fermata, puoi scendere alla successiva che si trova a 300 metri. <a href="https://www.tper.it/sites/tper.it/files/FE%20-%20mappa%20linee%20urbane%202014.pdf" target="_blank">Qui trovi una mappa</a> di tutte le linee disponibili.<br/>
+				L'autobus ferma anche di fronte all'Hotel Touring, sia in direzione CNA Ferrara che in direzione stazione.<br/>
 				È anche possibile prendere un taxi, si trovano vicino all'uscita della stazione, sulla destra.<br>
-				Se ti piace camminare, l'hotel può essere raggiunto a piedi dalla stazione in circa 20 minuti.
+				Se ti piace camminare, la location può essere raggiunto a piedi dalla stazione in circa 20 minuti.
 			</p>
 		</div>
 
-		<div class="column_3">
-			<h5>In aereo</h5>
-			<p>
-				<strong>Dall'aeroporto Verona Villafranca</strong>: prendi il bus del <a href="http://www.aeroportoverona.it/en/aerobus_t2" target="_blank">Servizio Aerobus</a> fino alla stazione di Verona Porta Nuova, la fermata si trova appena fuori dal terminal arrivi. Le corse iniziano alle 6:30, ogni 20 minuti. Arrivato alla stazione segui le indicazioni alla sezione "In treno"
-			</p>
-		</div>
-
-		<div class="column_3">
+		<div class="column_4">
 			<h5>Hotel</h5>
 			<p>
-				<a href="http://www.sanmarco.vr.it/" target="_blank">Hotel San Marco</a>
-				Via Longhena, 42<br>
-				37138 Verona — Italy<br>
-				045569011<br>
-				045572299<br>
-				<a href="http://www.sanmarco.vr.it/" target="_blank">http://www.sanmarco.vr.it/</a><br>
+				<a href="http://www.cnafe.it/" target="_blank">CNA Ferrara</a>
+Via Caldirolo, 84<br>44123 Ferrara <br>Tel. 0532/749111<br>fax 0532/749236 <br>
+				<a href="http://www.cnafe.it/" target="_blank">http://www.cnafe.it/</a><br>
 				<br>
 				L'hotel che ospita la conferenza offre prezzi scontati per camere singole e doppie.
 			</p>
