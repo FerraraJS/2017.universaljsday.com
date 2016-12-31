@@ -43,8 +43,8 @@
                 </a>
             </p>
             <span>{% if site.data.config.partner %} {{ site.data.i18n.presents }} {% else %} {{ site.data.i18n.present }} {% endif %}</span>
-            <h1>{{ site.data.conference.name }}</h1>
-            <h2>{{ site.data.location.city }}, {{ site.data.conference.day }} {{ site.data.conference.year }}</h2>
+            <h1 id="conf_name">{{ site.data.conference.name }}</h1>
+            <h2 id="conf_location">{{ site.data.location.city }}, {{ site.data.conference.day }} {{ site.data.conference.year }}</h2>
         </header>
         <div class="share">
             <div class="addthis_wrapper">
@@ -68,6 +68,23 @@
                 <li><a href="mailto: info@grusp.org">Contatta il GrUSP</a></li>
             </ul>
         </footer>
+        
         <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50ac9a3237717dfe" defer async></script>
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ site.data.conference.anal_code }}']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.3.1/textFit.min.js"></script>
+        <script>
+            textFit(document.getElementById('conf_name'));
+            textFit(document.getElementById('conf_location'));
+        </script>
     </body>
 </html>
