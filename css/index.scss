@@ -157,7 +157,7 @@ section{
         & table{
             margin: auto;
 
-            td, th{
+            & td, & th{
                 padding: 5px;
                 text-align: center;
             }
