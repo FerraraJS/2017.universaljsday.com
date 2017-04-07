@@ -29,7 +29,7 @@ nav{
         & > li{
             display: inline-block;
             margin: 1rem 1.5rem;
-            
+
             & > a{
                 color: $nav-color;
                 text-decoration: none;
@@ -185,9 +185,9 @@ section{
                 &::after{
                     border-bottom-color: $section-alternate-underline-color;
                 }
-            }      
+            }
         }
-  
+
     }
 }
 
@@ -203,7 +203,7 @@ footer{
         & > li{
             display: inline-block;
             margin: 1rem 1.5rem;
-            
+
             & > a{
                 color: $footer-link-color;
                 text-decoration: none;
@@ -258,4 +258,8 @@ footer{
     width: 20rem;
     max-width: 100%;
     height: auto;
+}
+
+.patr_sponsor {
+    float: left;
 }
