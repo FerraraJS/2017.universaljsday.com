@@ -27,7 +27,7 @@
                 {% if site.data.config.call_for_paper %}<li><a href="#cfp">{{ site.data.i18n.call_for_paper}}</a></li>{% endif %}
                 {% if site.data.config.speakers %}<li><a href="#speakers">{{ site.data.i18n.speakers}}</a></li>{% endif %}
                 {% if site.data.config.workshop %}<li><a href="#">{{ site.data.i18n.workshop}}</a></li>{% endif %}
-                <li><a href="#tickets">{{ site.data.i18n.tickets}}</a></li>
+                {% if page.tickets %} <li><a href="#tickets">{{ site.data.i18n.tickets}}</a></li> {% endif %}
                 <li><a href="#location">{{ site.data.i18n.location}}</a></li>
                 <li><a href="#sponsor">{{ site.data.i18n.sponsor}}</a></li>
                 <li><a href="http://2016.universaljsday.com/" target="_blank">2016</a></li>
@@ -38,8 +38,8 @@
                 {% if site.data.config.partner %}
                 <a href="{{ site.data.partner.url }}" title="{{ site.data.partner.name }}">
                     <img src="./images/partners/{{ site.data.partner.alias }}.png" alt="{{ site.data.partner.name }}" />
-                </a>      
-                <span>+</span>          
+                </a>
+                <span>+</span>
                 {% endif %}
                 <a href="http://www.grusp.org" title="GrUSP">
                     <img src="./images/partners/grusp.png" alt="GrUSP" />
@@ -74,7 +74,7 @@
                 <li><a href="mailto: info@grusp.org">Contatta il GrUSP</a></li>
             </ul>
         </footer>
-        
+
         <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50ac9a3237717dfe" defer async></script>
         <script type="text/javascript">
         var _gaq = _gaq || [];
